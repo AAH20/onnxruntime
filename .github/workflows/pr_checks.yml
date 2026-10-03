@@ -14,7 +14,7 @@ permissions:  # set top-level default permissions as security best practice
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   auto-apply-fixes:
